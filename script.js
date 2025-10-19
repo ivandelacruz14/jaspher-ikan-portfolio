@@ -109,9 +109,35 @@ modal.style.display = "flex";
     }
     });
 
-    // Contact form submission
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-e.preventDefault();
-alert('Thank you for your message! I will get back to you soon.');
-this.reset();
+  // Contact form submission (Formspree integration)
+const form = document.getElementById("contact-form");
+const status = document.createElement("p");
+status.id = "form-status";
+status.style.marginTop = "10px";
+status.style.fontWeight = "bold";
+form.appendChild(status);
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      status.style.color = "lightgreen";
+      status.textContent = "✅ Message sent successfully!";
+      form.reset();
+    } else {
+      status.style.color = "red";
+      status.textContent = "❌ There was a problem sending your message.";
+    }
+  } catch (error) {
+    status.style.color = "orange";
+    status.textContent = "⚠️ Network error. Please try again later.";
+  }
 });
