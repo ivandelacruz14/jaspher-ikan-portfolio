@@ -1,178 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jaspher's Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaspher Ikan Samarista | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header id="home">
-    <nav class="navbar">
-    <div class="logo">JIS</div>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+
+    <!-- Custom Mouse Cursor -->
+    <div id="mouse-circle"></div>
+    <div id="mouse-dot"></div>
+    
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- Draggable Robot -->
+    <div class="floating-robot" id="floatingRobot">
+        <div class="robot-body">
+            <div class="robot-eye"></div>
+            <div class="robot-eye right"></div>
+            <div class="robot-mouth" id="robotMouth"></div>
+        </div>
+        <div class="robot-talk-bubble" id="robotTalk">Drag me!</div>
+    </div>
+
+    <nav class="top-nav" id="header">
+        <div style="font-weight: bold; letter-spacing: 5px; color: var(--primary);">JASPHER.SYS</div>
+        <div>
+            <a href="#home">HOME</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#map">JOURNEY</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+        <div style="font-size: 0.7rem; opacity: 0.6;">PH // 2026_CORE</div>
     </nav>
 
-    <div class="glass hero-box">
-    <h1>Welcome to my portfolio</h1>
-    <div class="typewriter">
-        <span id="changing-text"></span>
+    <div class="sidebar" id="sidebar">
+        <a href="#home" title="Home"><i class="fas fa-home"></i></a>
+        <a href="#projects" title="Projects"><i class="fas fa-code"></i></a>
+        <a href="#map" title="Journey"><i class="fas fa-map"></i></a>
+        <a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a>
     </div>
-    <p>Explore my work and get to know me better.</p>
-    <div class="cta-buttons">
-        <a href="#projects" class="cta-button">View My Work</a>
-        <a href="#contact" class="cta-button secondary">Get In Touch</a>
-    </div>
-    </div>
-</header>
 
-<section id="about" class="fade-section">
-    <div class="section-container">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-container">
-        <div class="about-image">
-        <!-- Replace with your actual image -->
-        <img src="image me.jpg" alt="Jaspher Samarista" />
-        </div>
-        <div class="about-content glass">
-        <h2>Hi, I'm Jaspher!</h2>
-        <p>
-            I'm <strong>Jaspher Ikan D. Samarista</strong>, a 3rd year BS Information Technology student passionate about
-            creating functional and visually engaging digital solutions.
-        </p>
-        <p>
-            I build responsive websites using HTML, CSS, and JavaScript, and I also create Arduino-based IoT projects for
-            academic and client needs.
-        </p>
-        <p>
-            My goal is to merge software and hardware innovation crafting smart, interactive systems.
-        </p>
-        
-        <div class="skills">
-        <span class="skill-tag">HTML/CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Arduino</span>
-            <span class="skill-tag">IoT</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">UI/UX Design</span>
-            <span class="skill-tag">Responsive Design</span>
-            <span class="skill-tag">Problem Solving</span>
-        </div>
-        </div>
-    </div>
-</div>
-</section>
+    <div class="container" id="home">
+        <section class="hero">
+            <div class="hero-text">
+                <div class="robot-ai scroll-animate">
+                    <div class="robot-head"></div>
+                    <span style="font-size: 0.8rem; opacity: 0.7;">"Hi! Welcome to my digital space."</span>
+                </div>
+                <h1 class="scroll-animate-left">Jaspher Ikan<br> Samarista</h1>
+                <div class="typewriter" id="type-text"></div>
+                
+                <div class="glass-card about-box scroll-animate">
+                    <h3 style="font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 10px; color: var(--primary);">> ABOUT_ME</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.7; line-height: 1.6;">
+                        I’m Jaspher Ikan D. Samarista, an aspiring IT professional focused on building responsive web applications and IoT systems. I work with HTML, CSS, JavaScript, MySQL, and Arduino to create smart, user-friendly, and data-driven solutions. I’m passionate about combining software and hardware to develop innovative and practical technology.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- PROFILE CARD WITH FIXED FLIP -->
+            <div class="profile-container scroll-animate-right">
+                <div class="profile-card" id="profileCard">
+                    <!-- Front: myprofile1.jpg -->
+                    <div class="face front">
+                        <img src="myprofle1.jpg" alt="Jaspher Profile Front">
+                    </div>
+                    
+                    <!-- Back: myprofile2.jpg -->
+                    <div class="face back">
+                        <img src="myprofile2.jpg" alt="Jaspher Profile Back">
+                    </div>
+                </div>
+                <div class="profile-instruction">Click profile to flip</div>
+            </div>
+        </section>
 
-<section id="projects" class="fade-section">
-    <div class="section-container">
-    <h2 class="section-title">My Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card" onclick="openModal('project1')">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Smart Medicine Dispenser" />
-        <div class="project-info">
-            <h3>Smart Medicine Dispenser</h3>
-            <p>An IoT-based dispenser that releases medicine doses on schedule using Arduino R3, RTC, and stepper motor.</p>
-            <div class="project-tech">
-            <span class="tech-tag">Arduino</span>
-            <span class="tech-tag">ARDUINO R3</span>
-            <span class="tech-tag">C++</span>
+        <div style="overflow: hidden; margin: 50px 0;">
+            <div class="tech-track loop-left scroll-animate" id="t1">
+                <div class="tech-item">HARDWARE_IOT</div><div class="tech-item">C++_ADVANCED</div><div class="tech-item">REACT_JS</div>
+                <div class="tech-item">SYSTEM_DESIGN</div><div class="tech-item">NODE_JS</div><div class="tech-item">PYTHON_AI</div>
+            </div>
+            <div class="tech-track loop-right scroll-animate" id="t2">
+                <div class="tech-item">CYBER_SECURITY</div><div class="tech-item">SQL_ENGINE</div><div class="tech-item">UI_ARCHITECTURE</div>
+                <div class="tech-item">NEURAL_NETS</div><div class="tech-item">GITHUB_API</div><div class="tech-item">DOCKER_CORE</div>
             </div>
         </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('project2')">
-        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Library System" />
-        <div class="project-info">
-        <h3>Library System</h3>
-        <p>A simple Library Management System built using C++ and file handling with user authentication.</p>
-        <div class="project-tech">
-    <span class="tech-tag">C++</span>
-    <span class="tech-tag">File Handling</span>
-    </div>
-    </div>
-</div>
-        
-        <div class="project-card" onclick="openModal('project3')">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Portfolio Website" />
-        <div class="project-info">
-        <h3>Portfolio Website</h3>
-        <p>A responsive glass-themed portfolio website made with HTML, CSS, and JavaScript.</p>
-        <div class="project-tech">
-        <span class="tech-tag">HTML</span>
-        <span class="tech-tag">CSS</span>
-        <span class="tech-tag">JavaScript</span>
-    </div>
-    </div>
-    </div>
-</div>
-</div>
-</section>
 
-<section id="contact" class="fade-section">
-    <div class="section-container">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-container">
-        <div class="contact-info glass">
-        <h3>Contact Information</h3>
-        <p><i class="fas fa-envelope"></i> jaspherikan1414@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +63 994 340 5257</p>
-        <p><i class="fas fa-map-marker-alt"></i> Philippines</p>
-        
-        <div class="social-links">
-            <a href="https://web.facebook.com/profile.php?id=61579131197248"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/ikan_delacruz/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/jaspher-ikan-samarista-332b0a333/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+        <h2 class="section-title scroll-animate-left" id="projects">PROJECTS</h2>
+        <div class="grid">
+            <div class="glass-card project-card scroll-animate">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Smart Medicine Dispenser" class="project-image">
+                <div class="project-content">
+                    <h3 style="color: var(--primary);">Smart Medicine Dispenser</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin: 10px 0;">IoT device for elderly care using Arduino and Real-time clocking with mobile notifications.</p>
+                    <div style="font-size: 0.7rem; border-top: 1px solid var(--border); padding-top: 10px;">TECH: Arduino, RTC, C++, Mobile App</div>
+                </div>
+            </div>
+            <div class="glass-card project-card scroll-animate">
+                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Inventory System" class="project-image">
+                <div class="project-content">
+                    <h3 style="color: var(--primary);">Inventory System v2</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin: 10px 0;">Automated asset tracking with barcode scanning for small-scale business enterprises.</p>
+                    <div style="font-size: 0.7rem; border-top: 1px solid var(--border); padding-top: 10px;">TECH: MySQL, Node.js, React, CSS</div>
+                </div>
+            </div>
+            <div class="glass-card project-card scroll-animate">
+                <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Weather Monitoring System" class="project-image">
+                <div class="project-content">
+                    <h3 style="color: var(--primary);">Weather Monitoring System</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin: 10px 0;">Real-time weather tracking with IoT sensors and data visualization dashboard.</p>
+                    <div style="font-size: 0.7rem; border-top: 1px solid var(--border); padding-top: 10px;">TECH: IoT Sensors, Python, WebSocket, Chart.js</div>
+                </div>
+            </div>
         </div>
-        </div>
-        
-        <div class="contact-form glass">
-        <h3>Send Me a Message</h3>
-            <form id="contact-form" action="https://formspree.io/f/xjkazwvw" method="POST">
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
-  </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" required></textarea>
-  </div>
-  <button type="submit" class="submit-btn">Send Message</button>
-</form>
-        </div>
-    </div>
-    </div>
-</section>
 
-<footer>
-<p>© 2025 Jaspher Samarista. All Rights Reserved.</p>
-</footer>
+        <h2 class="section-title scroll-animate-left" id="map">IT PROGRESS MAP</h2>
+        <div class="map-item glass-card scroll-animate">
+            <h4>2022 // LOGIC_INIT</h4>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Fundamentals of C++, Data Structures & Algorithms, and Computer Architecture.</p>
+        </div>
+        <div class="map-item glass-card scroll-animate">
+            <h4>2023 // IOT_HARDWARE</h4>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Integrating sensors and hardware with web dashboards. Built 3 IoT projects for clients.</p>
+        </div>
+        <div class="map-item glass-card scroll-animate">
+            <h4>2024 // FULLSTACK_CORE</h4>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Building end-to-end scalable web applications with React, Node.js, and database management.</p>
+        </div>
+        <div class="map-item glass-card scroll-animate">
+            <h4>2025 // AI_INTEGRATION</h4>
+            <p style="font-size: 0.8rem; opacity: 0.6;">Working on machine learning models and AI integration into web and IoT systems.</p>
+        </div>
 
-<!-- Project Details Modal -->
-<div class="modal" id="project-modal">
-    <div class="modal-content glass">
-    <div class="modal-info">
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
-        <div class="modal-tech" id="modal-tech"></div>
-        <div class="modal-buttons">
-        <button class="view-project-btn" id="view-project-btn">View Project</button>
-        <button class="close-btn" onclick="closeModal()">Close</button>
+        <div class="contact-section glass-card scroll-animate" id="contact">
+            <h2 class="section-title">CONTACT ME</h2>
+            <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Interested in collaborating? Feel free to reach out for project inquiries, opportunities, or just to connect.
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-item scroll-animate-left">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <a href="mailto:jaspherikan1414@gmail.com">jaspherikan1414@gmail.com</a>
+                </div>
+                
+                <div class="contact-item scroll-animate">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h4>Phone</h4>
+                    <a href="tel:+639943405257">+63 994 340 5257</a>
+                </div>
+                
+                <div class="contact-item scroll-animate-right">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Location</h4>
+                    <p>Metro Manila, Philippines</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">Send me a message</h3>
+                <form id="contact-form" style="max-width: 500px; margin: 0 auto;">
+                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 12px; margin-bottom: 15px; background: var(--glass); border: 1px solid var(--border); border-radius: 8px; color: var(--primary);">
+                    <input type="email" placeholder="Your Email" style="width: 100%; padding: 12px; margin-bottom: 15px; background: var(--glass); border: 1px solid var(--border); border-radius: 8px; color: var(--primary);">
+                    <textarea placeholder="Your Message" rows="4" style="width: 100%; padding: 12px; margin-bottom: 15px; background: var(--glass); border: 1px solid var(--border); border-radius: 8px; color: var(--primary);"></textarea>
+                    <button type="submit" style="background: var(--glass); color: var(--primary); border: 1px solid var(--border); padding: 12px 30px; border-radius: 8px; font-weight: bold; cursor: none; transition: 0.3s; backdrop-filter: blur(10px);">Send Message</button>
+                </form>
+            </div>
         </div>
     </div>
-    </div>
-</div>
 
-<script src="script.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div class="signature">JASPHER IKAN D. SAMARISTA</div>
+            <div class="copyright">© 2025 Portfolio. All rights reserved. Handcrafted with precision.</div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/ikan_delacruz/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=61579131197248"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
